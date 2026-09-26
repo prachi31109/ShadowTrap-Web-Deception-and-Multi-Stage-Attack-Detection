@@ -1,0 +1,491 @@
+:root {
+    --bg: #f4f7fb;
+    --surface: #ffffff;
+    --surface-soft: #f8fafc;
+    --border: #e5eaf1;
+    --text: #172033;
+    --muted: #687386;
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --danger: #dc2626;
+    --danger-soft: #fef2f2;
+    --warning: #d97706;
+    --warning-soft: #fffbeb;
+    --success: #059669;
+    --success-soft: #ecfdf5;
+    --shadow: 0 8px 30px rgba(15, 23, 42, 0.06);
+    --radius: 14px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.container {
+    width: min(1120px, calc(100% - 40px));
+    margin: auto;
+}
+
+/* ---------- Navbar ---------- */
+
+.navbar {
+    background: #111827;
+    color: white;
+    border-bottom: 1px solid #1f2937;
+}
+
+.navbar-inner {
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-mark {
+    width: 38px;
+    height: 38px;
+    border-radius: 11px;
+    display: grid;
+    place-items: center;
+    background: #2563eb;
+    font-size: 19px;
+}
+
+.brand-name {
+    font-size: 19px;
+    font-weight: 750;
+}
+
+.brand-subtitle {
+    color: #9ca3af;
+    font-size: 11px;
+    margin-top: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 8px;
+}
+
+.nav-links a {
+    color: #d1d5db;
+    padding: 9px 13px;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+.nav-links a:hover {
+    background: #1f2937;
+    color: white;
+}
+
+/* ---------- Hero ---------- */
+
+.hero {
+    padding: 70px 0 50px;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.35fr 0.65fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--primary);
+    background: #eff6ff;
+    padding: 7px 11px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.hero h1 {
+    font-size: clamp(38px, 5vw, 62px);
+    line-height: 1.03;
+    letter-spacing: -2px;
+    margin: 18px 0;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero p {
+    color: var(--muted);
+    line-height: 1.75;
+    font-size: 17px;
+    max-width: 650px;
+}
+
+.hero-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: var(--shadow);
+}
+
+.hero-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.status-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--success);
+    box-shadow: 0 0 0 5px var(--success-soft);
+}
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--success);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* ---------- Store ---------- */
+
+.section {
+    padding: 30px 0 70px;
+}
+
+.section-header {
+    margin-bottom: 24px;
+}
+
+.section-header h2 {
+    margin: 0 0 6px;
+    font-size: 25px;
+}
+
+.section-header p {
+    color: var(--muted);
+    margin: 0;
+}
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.product {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 22px;
+    box-shadow: var(--shadow);
+}
+
+.product-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    background: #eff6ff;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+    margin-bottom: 17px;
+}
+
+.product h3 {
+    margin: 0 0 7px;
+    font-size: 17px;
+}
+
+.product p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.price {
+    font-weight: 750;
+    margin-top: 18px;
+}
+
+/* ---------- Generic card ---------- */
+
+.card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+}
+
+/* ---------- Login ---------- */
+
+.auth-page {
+    min-height: calc(100vh - 72px);
+    display: grid;
+    place-items: center;
+    padding: 40px 20px;
+}
+
+.auth-card {
+    width: min(420px, 100%);
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    padding: 34px;
+    box-shadow: var(--shadow);
+}
+
+.auth-icon {
+    width: 52px;
+    height: 52px;
+    border-radius: 14px;
+    background: #eff6ff;
+    display: grid;
+    place-items: center;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.auth-card h1 {
+    margin: 0 0 7px;
+    font-size: 25px;
+}
+
+.auth-card .muted {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.form-group {
+    margin-bottom: 17px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 13px;
+    border: 1px solid #d9dee7;
+    border-radius: 9px;
+    outline: none;
+    font-size: 14px;
+}
+
+.form-group input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px #dbeafe;
+}
+
+.btn {
+    width: 100%;
+    border: 0;
+    border-radius: 9px;
+    padding: 12px 15px;
+    background: var(--primary);
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--primary-dark);
+}
+
+.auth-meta {
+    margin-top: 18px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+/* ---------- Admin panel ---------- */
+
+.admin-layout {
+    min-height: calc(100vh - 72px);
+}
+
+.admin-header {
+    background: #111827;
+    color: white;
+    padding: 25px 0;
+}
+
+.admin-header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin-title h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.admin-title p {
+    margin: 5px 0 0;
+    color: #9ca3af;
+    font-size: 13px;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    padding: 6px 10px;
+    font-size: 11px;
+    font-weight: 750;
+}
+
+.badge-green {
+    background: var(--success-soft);
+    color: var(--success);
+}
+
+.badge-red {
+    background: var(--danger-soft);
+    color: var(--danger);
+}
+
+.badge-yellow {
+    background: var(--warning-soft);
+    color: var(--warning);
+}
+
+.admin-content {
+    padding: 35px 0;
+}
+
+.admin-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.admin-card {
+    padding: 24px;
+}
+
+.admin-card h2 {
+    font-size: 17px;
+    margin: 0 0 7px;
+}
+
+.admin-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.secret-value {
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: 9px;
+    padding: 12px;
+    font-family: monospace;
+    font-size: 12px;
+    word-break: break-all;
+}
+
+.file-list {
+    list-style: none;
+    padding: 0;
+    margin: 17px 0 0;
+}
+
+.file-list li {
+    border-top: 1px solid var(--border);
+    padding: 13px 0;
+}
+
+.file-list a {
+    color: var(--primary);
+    font-size: 13px;
+}
+
+/* ---------- 404 ---------- */
+
+.error-page {
+    min-height: calc(100vh - 72px);
+    display: grid;
+    place-items: center;
+    text-align: center;
+}
+
+.error-code {
+    font-size: 82px;
+    line-height: 1;
+    font-weight: 800;
+    color: #dbe3ee;
+}
+
+.error-page h1 {
+    margin: 20px 0 8px;
+}
+
+.error-page p {
+    color: var(--muted);
+}
+
+/* ---------- Footer ---------- */
+
+.footer {
+    padding: 28px 0;
+    color: #8791a2;
+    font-size: 12px;
+    border-top: 1px solid var(--border);
+}
+
+/* ---------- Responsive ---------- */
+
+@media (max-width: 800px) {
+    .hero-grid,
+    .products,
+    .admin-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        padding-top: 45px;
+    }
+}
